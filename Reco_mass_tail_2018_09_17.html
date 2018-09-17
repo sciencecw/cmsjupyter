@@ -1,64 +1,8 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-<title>Reco_mass_tail_2018_09_17 slides</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head><meta charset="utf-8" />
+<title>Reco_mass_tail_2018_09_17</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'reveal.js/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-
-</script>
-
-<!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
-<![endif]-->
-
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration -->
-
-<!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11774,133 +11718,59 @@ ul.typeahead-list > li > a {
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-.reveal {
-  font-size: 160%;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal pre {
-  width: inherit;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-.reveal pre code {
-  padding: 0px;
-}
-.reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal i {
-  font-style: normal;
-  font-family: FontAwesome;
-  font-size: 2em;
-}
-.reveal .slides {
-  text-align: left;
-}
-.reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
-}
-.reveal .controls .navigate-left,
-.reveal .controls .navigate-left.enabled {
-  border-right-color: #727272;
-}
-.reveal .controls .navigate-left.enabled:hover,
-.reveal .controls .navigate-left.enabled.enabled:hover {
-  border-right-color: #dfdfdf;
-}
-.reveal .controls .navigate-right,
-.reveal .controls .navigate-right.enabled {
-  border-left-color: #727272;
-}
-.reveal .controls .navigate-right.enabled:hover,
-.reveal .controls .navigate-right.enabled.enabled:hover {
-  border-left-color: #dfdfdf;
-}
-.reveal .controls .navigate-up,
-.reveal .controls .navigate-up.enabled {
-  border-bottom-color: #727272;
-}
-.reveal .controls .navigate-up.enabled:hover,
-.reveal .controls .navigate-up.enabled.enabled:hover {
-  border-bottom-color: #dfdfdf;
-}
-.reveal .controls .navigate-down,
-.reveal .controls .navigate-down.enabled {
-  border-top-color: #727272;
-}
-.reveal .controls .navigate-down.enabled:hover,
-.reveal .controls .navigate-down.enabled.enabled:hover {
-  border-top-color: #dfdfdf;
-}
-.reveal .progress span {
-  background: #727272;
-}
-div.input_area {
-  padding: 0.06em;
-}
-div.code_cell {
-  background-color: transparent;
-}
-div.prompt {
-  width: 11ex;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  text-align: right;
-}
-div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-}
-div.output_prompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
-}
-div.text_cell.rendered .rendered_html {
-  /* The H1 height seems miscalculated, we are just hidding the scrollbar */
-  overflow-y: hidden;
-}
-a.anchor-link {
-  /* There is still an anchor, we are only hidding it */
-  display: none;
-}
-.rendered_html p {
-  text-align: inherit;
-}
-::-webkit-scrollbar
-{
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar *
-{
-  background:transparent;
-}
-::-webkit-scrollbar-thumb
-{
-  background: #727272 !important;
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-</head>
-
-
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
 <body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
 
-
-<div class="reveal">
-<div class="slides">
-<section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -11908,7 +11778,7 @@ a.anchor-link {
 <h1 id="reco-mass-tail-discrepency">reco mass tail discrepency<a class="anchor-link" href="#reco-mass-tail-discrepency">&#182;</a></h1>
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -11949,7 +11819,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -11960,8 +11830,8 @@ a.anchor-link {
 <li>at least 1 photon object and only 1 electron object required</li>
 <li>no muons in sample</li>
 <li>cut-based working points</li>
-<li>photon: medium, pT&gt;20  </li>
-<li>electron: medium, pT&gt;10 (will move to tight)</li>
+<li>photon: medium, pT&gt;20  (15 in ntuple maker)</li>
+<li>electron: medium, pT&gt;10</li>
 <li>muon: tight, pT&gt; 25</li>
 </ul>
 
@@ -11980,7 +11850,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -11995,7 +11865,264 @@ a.anchor-link {
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Import-Samples">Import Samples<a class="anchor-link" href="#Import-Samples">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kakw</span><span class="o">/</span><span class="n">efake</span><span class="o">/</span><span class="n">WG_Analysis</span><span class="o">/</span><span class="n">Plotting</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/home/kakw/efake/WG_Analysis/Plotting
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> <span class="o">%</span><span class="k">run</span> interactiveStackTree.py --baseDir /data/users/jkunkle/Resonances/LepGamma_elg_2018_03_28/  \
+<span class="o">--</span><span class="n">samplesConf</span> <span class="n">Modules</span><span class="o">/</span><span class="n">Resonance</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">xsFile</span> <span class="n">cross_sections</span><span class="o">/</span><span class="n">photon15</span><span class="o">.</span><span class="n">py</span> \
+<span class="o">--</span><span class="n">lumi</span> <span class="mf">35900.</span> <span class="o">--</span><span class="n">treeName</span> <span class="n">UMDNTuple</span><span class="o">/</span><span class="n">EventTree</span> <span class="o">--</span><span class="n">fileName</span> <span class="n">tree</span><span class="o">.</span><span class="n">root</span> <span class="o">--</span><span class="n">jupyt</span> <span class="o">--</span><span class="n">quiet</span>
+ <span class="c1"># /data/users/jkunkle/Resonances/LepGamma_elg_2018_03_28/</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Welcome to JupyROOT 6.10/05
+-------------------------------------
+ LOAD CROSS SECTION INFO
+-------------------------------------
+GJets_HT-600ToInf              xsec :     93.4 pb Nevent : 2463946  lumi : 2.64e+04 scale :     1.36
+WZ3LNLO                        xsec :     5.26 pb Nevent : 8260201  lumi : 1.57e+06 scale :   0.0229
+WJetsToLNu_HT-800To1200        xsec :     7.48 pb Nevent : 1544513  lumi : 2.06e+05 scale :    0.174
+WJetsToLNu_HT-600To800         xsec :     16.3 pb Nevent : 3779141  lumi : 2.32e+05 scale :    0.155
+GJets_HT-100To200              xsec : 9.23e+03 pb Nevent : 5131873  lumi :      556 scale :     64.5
+ResonanceMass2000              xsec : 0.000172 pb Nevent : 50000    lumi :  2.9e+08 scale : 0.000124
+TTJets_SingleLeptFromTbar      xsec :      179 pb Nevent : 46455353 lumi :  2.6e+05 scale :    0.138
+GJets_HT-40To100               xsec : 2.07e+04 pb Nevent : 4467985  lumi :      216 scale :      167
+ResonanceMass1000              xsec : 0.000748 pb Nevent : 50000    lumi : 6.69e+07 scale : 0.000537
+DiPhoton                       xsec :       84 pb Nevent : 19410854 lumi : 2.31e+05 scale :    0.155
+WW                             xsec :     12.2 pb Nevent : 1965200  lumi : 1.61e+05 scale :    0.222
+ResonanceMass900               xsec :  0.00113 pb Nevent : 50000    lumi : 4.42e+07 scale : 0.000812
+ResonanceMass1800              xsec : 0.000252 pb Nevent : 50000    lumi : 1.98e+08 scale : 0.000181
+STsCh                          xsec :     10.3 pb Nevent : 984400   lumi : 9.54e+04 scale :    0.376
+WJetsToLNu_HT-200To400         xsec :      428 pb Nevent : 4950373  lumi : 1.16e+04 scale :      3.1
+GJets_HT-400To600              xsec :      277 pb Nevent : 2529729  lumi : 9.12e+03 scale :     3.94
+ResonanceMass1600              xsec : 5.42e-05 pb Nevent : 50000    lumi : 9.22e+08 scale : 3.89e-05
+ResonanceMass3500              xsec :  2.3e-05 pb Nevent : 50000    lumi : 2.17e+09 scale : 1.65e-05
+ResonanceMass3000              xsec : 7.12e-05 pb Nevent : 50000    lumi : 7.02e+08 scale : 5.11e-05
+WJetsToLNu_HT-100To200         xsec : 1.33e+03 pb Nevent : 10235198 lumi : 7.72e+03 scale :     4.65
+TTJets_DiLept                  xsec :     85.7 pb Nevent : 6094476  lumi : 7.11e+04 scale :    0.505
+ResonanceMass2600              xsec :  0.00023 pb Nevent : 50000    lumi : 2.17e+08 scale : 0.000165
+TTGJets                        xsec :      3.7 pb Nevent : 1577833  lumi : 4.27e+05 scale :   0.0841
+ResonanceMass250               xsec :  0.00773 pb Nevent : 50000    lumi : 6.47e+06 scale :  0.00555
+DYJetsToLL_M-50                xsec : 5.77e+03 pb Nevent : 49144274 lumi : 8.52e+03 scale :     4.21
+ResonanceMass200               xsec :   0.0219 pb Nevent : 50000    lumi : 2.28e+06 scale :   0.0157
+ST_TbarW                       xsec :     35.6 pb Nevent : 988500   lumi : 2.78e+04 scale :     1.29
+ResonanceMass2800              xsec : 0.000136 pb Nevent : 50000    lumi : 3.69e+08 scale : 9.74e-05
+ResonanceMass800               xsec :  0.00373 pb Nevent : 50000    lumi : 1.34e+07 scale :  0.00268
+WJetsToLNu_Pt-100To250         xsec :      676 pb Nevent : 3644567  lumi : 5.39e+03 scale :     6.66
+ResonanceMass400               xsec : 0.000679 pb Nevent : 50000    lumi : 7.36e+07 scale : 0.000488
+ResonanceMass600               xsec :  0.00095 pb Nevent : 50000    lumi : 5.26e+07 scale : 0.000682
+ResonanceMass1200              xsec : 0.000262 pb Nevent : 50000    lumi : 1.91e+08 scale : 0.000188
+ZZ                             xsec :     16.5 pb Nevent : 996944   lumi : 6.03e+04 scale :    0.595
+TTbar                          xsec :      832 pb Nevent : 96584653 lumi : 1.16e+05 scale :    0.309
+ResonanceMass450               xsec :  0.00429 pb Nevent : 50000    lumi : 1.17e+07 scale :  0.00308
+WGToLNuG-madgraphMLM           xsec :      405 pb Nevent : 6103817  lumi : 1.51e+04 scale :     2.38
+ResonanceMass700               xsec : 0.000472 pb Nevent : 50000    lumi : 1.06e+08 scale : 0.000339
+DiPhoton_M80toInf              xsec :       84 pb Nevent : 13200226 lumi : 1.57e+05 scale :    0.228
+Wg                             xsec :      506 pb Nevent : 2183649  lumi : 4.32e+03 scale :     8.32
+WJetsToLNu_HT-1200To2500       xsec :     1.79 pb Nevent : 244532   lumi : 1.36e+05 scale :    0.263
+ResonanceMass2400              xsec : 4.68e-05 pb Nevent : 50000    lumi : 1.07e+09 scale : 3.36e-05
+WJetsToLNu-amcatnloFXFX        xsec : 6.15e+04 pb Nevent : 12965572 lumi :      211 scale :      170
+WGToLNuG_PtG-130-amcatnloFXFX  xsec :     2.02 pb Nevent : 841701   lumi : 4.16e+05 scale :   0.0864
+ST_TW                          xsec :     35.6 pb Nevent : 995600   lumi :  2.8e+04 scale :     1.28
+ResonanceMass500               xsec :  0.00242 pb Nevent : 50000    lumi : 2.07e+07 scale :  0.00174
+ResonanceMass1400              xsec : 0.000117 pb Nevent : 50000    lumi : 4.27e+08 scale :  8.4e-05
+ResonanceMass2200              xsec : 5.99e-05 pb Nevent : 50000    lumi : 8.34e+08 scale :  4.3e-05
+WGToLNuG_PtG-500-amcatnloFXFX  xsec :   0.0177 pb Nevent : 827560   lumi : 4.68e+07 scale : 0.000768
+WJetsToLNu-madgraphMLM         xsec : 6.15e+04 pb Nevent : 29705748 lumi :      483 scale :     74.4
+WGToLNuG_PtG-500-madgraphMLM   xsec :  0.00849 pb Nevent : 1393505  lumi : 1.64e+08 scale : 0.000219
+WWTo2L2Nu                      xsec :     12.2 pb Nevent : 1        lumi :   0.0821 scale : 4.37e+05
+WGToLNuG_PtG-130-madgraphMLM   xsec :    0.795 pb Nevent : 1645059  lumi : 2.07e+06 scale :   0.0174
+TTJets_SingleLeptFromT         xsec :      179 pb Nevent : 11957043 lumi : 6.69e+04 scale :    0.537
+GJets                          xsec : 6.93e+05 pb Nevent : 1972730  lumi :     2.85 scale : 1.26e+04
+STtCh                          xsec :     70.7 pb Nevent : 1        lumi :   0.0141 scale : 2.54e+06
+Zg                             xsec :      124 pb Nevent : 3044343  lumi : 2.45e+04 scale :     1.47
+DiPhoton_M40_80                xsec :      210 pb Nevent : 4878862  lumi : 2.32e+04 scale :     1.55
+ZGTo2LG                        xsec :      118 pb Nevent : 9321494  lumi : 7.91e+04 scale :    0.454
+GJets_HT-200To400              xsec :  2.3e+03 pb Nevent : 10036487 lumi : 4.36e+03 scale :     8.23
+WWG                            xsec :    0.215 pb Nevent : 827630   lumi : 3.85e+06 scale :  0.00931
+WJetsToLNu_HT-2500ToInf        xsec :   0.0404 pb Nevent : 253561   lumi : 6.28e+06 scale :  0.00572
+WJetsToLNu_HT-400To600         xsec :     63.9 pb Nevent : 1963464  lumi : 3.07e+04 scale :     1.17
+ResonanceMass4000              xsec :  2.3e-05 pb Nevent : 50000    lumi : 2.17e+09 scale : 1.65e-05
+WgPt500                        xsec :   0.0118 pb Nevent : 1393505  lumi : 1.18e+08 scale : 0.000304
+WGToLNuG-amcatnloFXFX          xsec :      822 pb Nevent : 3235156  lumi : 3.94e+03 scale :     9.12
+ResonanceMass300               xsec :  0.00307 pb Nevent : 50000    lumi : 1.63e+07 scale :  0.00221
+ResonanceMass350               xsec :  0.00147 pb Nevent : 50000    lumi :  3.4e+07 scale :  0.00106
+-------------------------------------
+BEGIN READING SAMPLES
+-------------------------------------
+AddSample: Reading SingleMuon ([&#39;SingleMuon&#39;])               [ <span class="ansi-red-intense-fg ansi-bold">Failed</span>  ]
+AddSample: Reading SingleElectron ([&#39;SingleElectron&#39;])       [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading DYJetsToLL_M-50 ([&#39;DYJetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading ZGTo2LG ([&#39;ZGTo2LG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading TTJets_DiLept ([&#39;TTJets_DiLept_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading TTJets_SingleLeptFromTbar ([&#39;TTJets_SingleLeptFromTbar_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading TTJets_SingleLeptFromT ([&#39;TTJets_SingleLeptFromT_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading TTGJets ([&#39;TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG-amcatnloFXFX ([&#39;WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG-madgraphMLM ([&#39;WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-130-amcatnloFXFX ([&#39;WGToLNuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-130-madgraphMLM ([&#39;WGToLNuG_PtG-130_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-500-amcatnloFXFX ([&#39;WGToLNuG_PtG-500_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-500-madgraphMLM ([&#39;WGToLNuG_PtG-500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG-amcatnloFXFXPhCut ([&#39;WGToLNuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8PhCutMax&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-130-amcatnloFXFXPhCut ([&#39;WGToLNuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8PhCutMaxPhCutMin&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-500-amcatnloFXFXPhCut ([&#39;WGToLNuG_PtG-500_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8PhCutMin&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG-madgraphMLMPhCut ([&#39;WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhCutMax&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-130-madgraphMLMPhCut ([&#39;WGToLNuG_PtG-130_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhCutMaxPhCutMin&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-500-madgraphMLMPhCut ([&#39;WGToLNuG_PtG-500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhCutMin&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG-madgraphMLMMTResCut ([&#39;WGToLNuG_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-130-madgraphMLMMTResCut ([&#39;WGToLNuG_PtG-130_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WGToLNuG_PtG-500-madgraphMLMMTResCut ([&#39;WGToLNuG_PtG-500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WJetsToLNu-madgraphMLM ([&#39;WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WWG ([&#39;WWG_TuneCUETP8M1_13TeV-amcatnlo-pythia8&#39;])  [ <span class="ansi-red-intense-fg ansi-bold">Failed</span>  ]
+AddSample: Reading DiPhoton ([&#39;DiPhotonJets_MGG-80toInf_13TeV_amcatnloFXFX_pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WJetsToLNuTrueHTOlap ([&#39;WJetsToLNu_TuneCUETP8M1_13TeV-madgraphMLM-pythia8TrueHTOlapPhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WJetsToLNu_HT-100To200 ([&#39;WJetsToLNu_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WJetsToLNu_HT-200To400 ([&#39;WJetsToLNu_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WJetsToLNu_HT-400To600 ([&#39;WJetsToLNu_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WJetsToLNu_HT-600To800 ([&#39;WJetsToLNu_HT-600To800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WJetsToLNu_HT-800To1200 ([&#39;WJetsToLNu_HT-800To1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WJetsToLNu_HT-1200To2500 ([&#39;WJetsToLNu_HT-1200To2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading WJetsToLNu_HT-2500ToInf ([&#39;WJetsToLNu_HT-2500ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8PhOlap&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading GJets_HT-100To200 ([&#39;GJets_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading GJets_HT-200To400 ([&#39;GJets_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading GJets_HT-400To600 ([&#39;GJets_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading GJets_HT-40To100 ([&#39;GJets_HT-40To100_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+AddSample: Reading GJets_HT-600ToInf ([&#39;GJets_HT-600ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8&#39;])  [ <span class="ansi-green-intense-fg ansi-bold">Success</span> ]
+WARNING - Child sample, SingleMuon, does not exist!
+Grouping Data
+Grouping Z+jets
+Grouping Zgamma
+Grouping Wgamma
+Grouping WgammaLO
+Grouping Wjets
+Grouping TTG
+Grouping GJets
+Grouping GammaGamma
+Grouping TTbar_DiLep
+Grouping TTbar_SingleLep
+Grouping AllTop
+Grouping MCBackground
+Grouping MCBackgroundLO
+Grouping JetBackground
+Grouping EleFakeBackground
+Samples ready.
+
+The draw syntax follows that of TTree.Draw.  Examples : 
+samples.Draw(&#39;met_et&#39;, &#39;EventWeight &amp;&amp; passcut_ee==1&#39;, &#39;(300, 0, 300)&#39;
+
+The first argument is a branch in the tree to draw
+The second argument is a set of cuts and/or weights to apply
+The third argument are the bin limits to use 
+
+To see all available branches do ListBranches()
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">base</span> <span class="o">=</span> <span class="s1">&#39;ph_n&gt;=1 &amp;&amp; el_n==1&#39;</span>
+<span class="n">baseeta</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="s1">&#39; &amp;&amp; abs(ph_eta[0])&lt;1.4&#39;</span>
+<span class="n">base1</span> <span class="o">=</span> <span class="s1">&#39;ph_n==1 &amp;&amp; el_n==1&#39;</span>
+<span class="n">base1eta</span> <span class="o">=</span> <span class="n">base1</span> <span class="o">+</span> <span class="s1">&#39; &amp;&amp; abs(ph_eta[0])&lt;1.4&#39;</span>
+<span class="n">a4</span> <span class="o">=</span> <span class="s1">&#39;&amp;&amp; ph_hasPixSeed[0]==0&#39;</span>  <span class="c1">#Pixel seed</span>
+<span class="n">b4</span> <span class="o">=</span> <span class="s1">&#39;&amp;&amp; ph_hasPixSeed[0]==1&#39;</span>
+<span class="n">ltmet</span> <span class="o">=</span> <span class="s1">&#39;&amp;&amp;met_pt&lt;25&#39;</span>
+<span class="n">gtmet</span> <span class="o">=</span> <span class="s1">&#39;&amp;&amp;met_pt&gt;25&#39;</span>
+<span class="n">phpt50</span> <span class="o">=</span> <span class="s2">&quot;&amp;&amp;ph_pt[0]&gt;50&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ROOT</span><span class="o">.</span><span class="n">gStyle</span><span class="o">.</span><span class="n">SetOptStat</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ROOT</span><span class="o">.</span><span class="n">gStyle</span><span class="o">.</span><span class="n">SetOptFit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">samples</span><span class="o">.</span><span class="n">change_stack_order</span><span class="p">(</span><span class="s2">&quot;GammaGamma&quot;</span><span class="p">,</span><span class="s2">&quot;Wjets&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fill-histogram">Fill histogram<a class="anchor-link" href="#Fill-histogram">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12052,7 +12179,7 @@ Data  is DATA!!
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
@@ -12428,7 +12555,42 @@ UiAkAwBQCoRkAABK4f8HfQh037WmGv8AAAAASUVORK5CYII=
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">samples</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="s2">&quot;ph_eta[0]&quot;</span><span class="p">,</span><span class="s2">&quot;met_pt&lt;25  &amp;&amp; m_lep_ph&gt;250&quot;</span><span class="p">,(</span><span class="mi">100</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),{</span><span class="s2">&quot;xlabel&quot;</span><span class="p">:</span><span class="s2">&quot;ph eta&quot;</span><span class="p">,</span><span class="s2">&quot;logy&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;ymax&quot;</span><span class="p">:</span><span class="mf">1e7</span><span class="p">,</span><span class="s2">&quot;blind&quot;</span><span class="p">:</span><span class="bp">False</span><span class="p">});</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>ph_eta[0] :<span class="ansi-cyan-intense-fg ansi-bold"> met_pt&lt;25  &amp;&amp; m_lep_ph&gt;250</span>
+removing sample __AllStack__
+Creating hist for Data
+Data  is DATA!!
+0.04
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12929,7 +13091,7 @@ DiIiojX3/wHMVMzUrjyLYgAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12937,6 +13099,41 @@ DiIiojX3/wHMVMzUrjyLYgAAAABJRU5ErkJggg==
 <h2 id="MET-in-high-mass-tail">MET in high mass tail<a class="anchor-link" href="#MET-in-high-mass-tail">&#182;</a></h2>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">samples</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="s2">&quot;met_pt&quot;</span><span class="p">,</span><span class="s2">&quot;met_pt&lt;25  &amp;&amp; m_lep_ph&gt;250&quot;</span><span class="p">,(</span><span class="mi">30</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">),{</span><span class="s2">&quot;xlabel&quot;</span><span class="p">:</span><span class="s2">&quot;MET&quot;</span><span class="p">,</span><span class="s2">&quot;logy&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;ymax&quot;</span><span class="p">:</span><span class="mf">1e5</span><span class="p">,</span><span class="s2">&quot;blind&quot;</span><span class="p">:</span><span class="bp">False</span><span class="p">});</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>met_pt :<span class="ansi-cyan-intense-fg ansi-bold"> met_pt&lt;25  &amp;&amp; m_lep_ph&gt;250</span>
+removing sample __AllStack__
+Creating hist for Data
+Data  is DATA!!
+0.04
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13324,86 +13521,471 @@ KJ554wEA2I//AWXt0fIAWQOYAAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><ul>
-<li>weird</li>
+<h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1><h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1><h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1><h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1><h1 id="BACKUP">BACKUP<a class="anchor-link" href="#BACKUP">&#182;</a></h1><h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">samples</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="s2">&quot;ph_pt[0]&quot;</span><span class="p">,</span><span class="s2">&quot; abs(ph_eta[0])&lt;1.4 &amp;&amp; met_pt&lt;25  &amp;&amp; m_lep_ph&gt;200&quot;</span><span class="p">,(</span><span class="mi">120</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">600</span><span class="p">),{</span><span class="s2">&quot;xlabel&quot;</span><span class="p">:</span><span class="s2">&quot;p_{T}(e)&quot;</span><span class="p">,</span><span class="s2">&quot;logy&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;ymin&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;blind&quot;</span><span class="p">:</span><span class="bp">False</span><span class="p">});</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>ph_pt[0] :<span class="ansi-cyan-intense-fg ansi-bold">  abs(ph_eta[0])&lt;1.4 &amp;&amp; met_pt&lt;25  &amp;&amp; m_lep_ph&gt;200</span>
+removing sample __AllStack__
+Creating hist for Data
+Data  is DATA!!
+0.04
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="photon-pT-requiring-photon-|eta|-&lt;-1.4--and-m(e,g)&gt;200GeV">photon pT requiring photon |eta| &lt; 1.4  and m(e,g)&gt;200GeV<a class="anchor-link" href="#photon-pT-requiring-photon-|eta|-&lt;-1.4--and-m(e,g)&gt;200GeV">&#182;</a></h3><ul>
+<li>photon objects in Data tends to the beampipe and leaves  tranverse energy behind</li>
 </ul>
-<p>Full documentation: <a href="http://hepcms-hn.umd.edu/~kakw/Reco_mass_tail_2018_09_17.html">http://hepcms-hn.umd.edu/~kakw/Reco_mass_tail_2018_09_17.html</a></p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">samples</span><span class="o">.</span><span class="n">curr_canvases</span><span class="p">[</span><span class="s2">&quot;top&quot;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_png output_subarea output_execute_result">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Info in &lt;TCanvas::Print&gt;: png file /tmp/tmpoMx_4y.png has been created
+</pre>
 </div>
 </div>
 
-<script>
+</div>
+</div>
 
-require(
-    {
-      // it makes sense to wait a little bit when you are loading
-      // reveal from a cdn in a slow connection environment
-      waitSeconds: 15
-    },
-    [
-      "reveal.js/lib/js/head.min.js",
-      "reveal.js/js/reveal.js"
-    ],
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">!</span>jupyter nbconvert Reco_mass_tail_2018_09_17.ipynb --to slides --SlidesExporter.reveal_theme<span class="o">=</span>solarized --SlidesExporter.reveal_transition<span class="o">=</span>none --reveal-prefix reveal.js
+</pre></div>
 
-    function(head, Reveal){
+</div>
+</div>
+</div>
 
-        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
+<div class="output_wrapper">
+<div class="output">
 
-            transition: "none",
 
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: "reveal.js/lib/js/classList.js",
-                  condition: function() { return !document.body.classList; } },
-                { src: "reveal.js/plugin/notes/notes.js",
-                  async: true,
-                  condition: function() { return !!document.body.classList; } }
-            ]
-        });
+<div class="output_area">
 
-        var update = function(event){
-          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
-            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
-          }
-        };
+<div class="prompt"></div>
 
-        Reveal.addEventListener('slidechanged', update);
 
-        function setScrollingSlide() {
-            var scroll = false
-            if (scroll === true) {
-              var h = $('.reveal').height() * 0.95;
-              $('section.present').find('section')
-                .filter(function() {
-                  return $(this).height() > h;
-                })
-                .css('height', 'calc(95vh)')
-                .css('overflow-y', 'scroll')
-                .css('margin-top', '20px');
-            }
-        }
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[NbConvertApp] WARNING | Config option `reveal_transition` not recognized by `SlidesExporter`.
+[NbConvertApp] Converting notebook Reco_mass_tail_2018_09_17.ipynb to slides
+[NbConvertApp] Writing 316529 bytes to Reco_mass_tail_2018_09_17.slides.html
+</pre>
+</div>
+</div>
 
-        // check and set the scrolling slide every time the slide change
-        Reveal.addEventListener('slidechanged', setScrollingSlide);
+</div>
+</div>
 
-    }
-
-);
-</script>
-
+</div>
+    </div>
+  </div>
 </body>
+
+ 
 
 
 </html>
